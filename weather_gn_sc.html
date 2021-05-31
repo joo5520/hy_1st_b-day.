@@ -20,6 +20,8 @@
     
     getURLParams(location.search);
     
+    var dong = getParameterByName('dong');
+    weather.herf="https://www.weather.go.kr/w/index.do#dong/"+dong;
 
 </script>
 
@@ -30,7 +32,7 @@
 
 
 	<div class="page-content">
-		<a href="https://www.weather.go.kr/w/index.do#dong/4215036000">
+		<a id="weather" herf="https://www.weather.go.kr/w/index.do#">
 			<img src="images/weather.png" style="width:49%; border:20px; float:left; margin-right:20px;">
 		</a>
 		
