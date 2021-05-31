@@ -16,13 +16,13 @@
         var result = {};
         url.replace(/[?&]{1}([^=&#]+)=([^&#]*)/g, function(s, k, v) { result[k] = decodeURIComponent(v); });
         return result;
-    }
-    
-    getURLParams(location.search);
-    
-    var dong = getParameterByName('dong');
-    weather.herf="https://www.weather.go.kr/w/index.do#dong/"+dong;
 
+	getURLParams(location.search);
+
+	var dong = getParameterByName('dong');
+   	weather.herf="https://www.weather.go.kr/w/index.do#dong/"+dong;
+     }
+    
 </script>
 
 <body id="top">
