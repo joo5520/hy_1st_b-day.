@@ -22,7 +22,7 @@
     var weather = document.getElementById("weather");
     var dong = getParameterByName('dong'); // 4211065000
     alert("https://www.weather.go.kr/w/index.do#dong/"+dong);
-    weather.location.href ="https://www.weather.go.kr/w/index.do#dong/"+dong;
+    var url ="https://www.weather.go.kr/w/index.do#dong/"+dong;
 
 	
     
@@ -37,7 +37,7 @@
 
 
 	<div class="page-content">
-		<a id="weather" href=>
+		<a id="weather" href="location.href=url">
 			<img src="images/weather.png" style="width:49%; border:20px; float:left; margin-right:20px;">
 		</a>
 		
