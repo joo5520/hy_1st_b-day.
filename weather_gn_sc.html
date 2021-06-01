@@ -17,9 +17,10 @@
         url.replace(/[?&]{1}([^=&#]+)=([^&#]*)/g, function(s, k, v) { result[k] = decodeURIComponent(v); });
         return result;
 
-	getURLParams(location.search);
-
+//	getURLParams(location.search);
+        
 	var dong = getParameterByName('dong');
+	alert(dong);
    	weather.href="https://www.weather.go.kr/w/index.do#dong/"+dong;
      }
     
