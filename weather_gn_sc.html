@@ -11,18 +11,15 @@
     <meta property="og:image" content="https://www.weather.go.kr/w/iphone-shortcut.png">
 
     <script>
-    function getURLParams(url) {
-    	var result = {};
-        url.replace(/[?&]{1}([^=&#]+)=([^&#]*)/g, function(s, k, v) { result[k] = decodeURIComponent(v); });
-        return result;
-
-//	getURLParams(location.search);
-        
-	var dong = getParameterByName('dong');
-	alert(dong);
-   	weather.href="https://www.weather.go.kr/w/index.do#dong/"+dong;
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
-    
+	    
+    var dong = getParameterByName('dong'); // 4211065000
+
     </script>
 </head>
 
