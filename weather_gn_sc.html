@@ -21,10 +21,12 @@
 
     var weather = document.getElementById("weather");
     var dong = getParameterByName('dong'); // 4211065000
-    alert("https://www.weather.go.kr/w/index.do#dong/"+dong);
-    var url ="https://www.weather.go.kr/w/index.do#dong/"+dong;
+    //alert("https://www.weather.go.kr/w/index.do#dong/"+dong);
+    //var url ="https://www.weather.go.kr/w/index.do#dong/"+dong;
 
-	
+    function url() {
+	location.href="https://www.weather.go.kr/w/index.do#dong/"+dong;
+     }
     
     </script>
 </head>
@@ -37,7 +39,7 @@
 
 
 	<div class="page-content">
-		<a id="weather" href=url>
+		<a href="JavaScript:url()>
 			<img src="images/weather.png" style="width:49%; border:20px; float:left; margin-right:20px;">
 		</a>
 		
