@@ -16,10 +16,13 @@
         var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
                 results = regex.exec(location.search);
         return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
+
+	var weather = document.getElementById("weather");
+   	var dong = getParameterByName('dong'); // 4211065000
 	    
-    var dong = getParameterByName('dong'); // 4211065000
-    weather.href="https://www.weather.go.kr/w/index.do#dong/"+dong;
+    	weather.href="https://www.weather.go.kr/w/index.do#dong/"+dong;
+     }
+	
     
     </script>
 </head>
