@@ -20,13 +20,20 @@
 	    
 
     var weather = document.getElementById("weather");
-    var dong = getParameterByName('dong'); // 4211065000
+    var dong = getParameterByName('dong'); // 
+    var stn = getParameterByName('stn'); // 
     //alert("https://www.weather.go.kr/w/index.do#dong/"+dong);
     //var url ="https://www.weather.go.kr/w/index.do#dong/"+dong;
 
     function url() {
   	location.href="https://www.weather.go.kr/special/CRP/beach/rpt_beach_"+dong+".html";
      }
+	    
+    function url_rip() {
+	var yesterday = new Date(now.setDate(now.getDate() - 1));
+	var yyyymmdd = getFormatDate(yesterday);
+  	location.href="https://www.weather.go.kr/w/repositary/image/cht/img2/ripcurrent_"+stn+"_"+yyyymmdd+"12.html";
+     }	    
     
     </script>
 </head>
