@@ -30,7 +30,8 @@
      }
 	    
     function url_rip() {
-	var yesterday = new Date(now.setDate(now.getDate() - 1));
+	var today = new Date();
+	var yesterday = new Date(today.setDate(now.getDate() - 1));
 	var yyyymmdd = getFormatDate(yesterday);
   	location.href="https://www.weather.go.kr/w/repositary/image/cht/img2/ripcurrent_"+stn+"_"+yyyymmdd+"12.html";
      }	    
